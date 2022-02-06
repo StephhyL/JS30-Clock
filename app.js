@@ -5,5 +5,5 @@ const PORT = 1234;
 app.use(express.static("public"));
 
 app.listen(1234, () => {
-  console.log(`server running on port 3000`);
+  console.log(`server running...`);
 });
