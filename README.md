@@ -10,7 +10,7 @@ Link: https://js30-clock.herokuapp.com/
 
 ## Final Product Preview
 
-![home-page](https://github.com/StephhyL/JS30-Drum-Kit/blob/main/docs/home.png)
+![home-page](https://github.com/StephhyL/JS30-Clock/blob/main/public/docs/home.png)
 
 ### Concepts I've Learned/Re-learned From this Challenge:
 
