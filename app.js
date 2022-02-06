@@ -4,6 +4,6 @@ const PORT = 1234;
 
 app.use(express.static("public"));
 
-app.listen(1234, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`server running...`);
 });
