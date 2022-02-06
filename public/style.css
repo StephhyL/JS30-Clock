@@ -13,6 +13,16 @@ body {
   flex: 1;
   min-height: 100vh;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.digital-clock {
+  background-color: white;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  border-radius: 40px;
+  width: 35rem;
 }
 
 .clock {

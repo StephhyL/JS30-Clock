@@ -22,15 +22,18 @@ window.addEventListener("load", () => {
     const hoursDegree = (hours / 12) * 360 + 90;
     hourHand.style.transform = `rotate(${hoursDegree}deg)`;
 
+    // formatTime comes the date and the time
+    const formatTime = `${now.toDateString()}`;
+
+    // displays the date and time as a string
+    document.getElementById("digital-date").innerHTML = formatTime;
+
     // time stringifies the hour/minute/second and add leading zero to make it 2 digits
     const time = `${hours.toString().padStart(2, "0")}:${minutes
       .toString()
       .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-    // formatTime comes the date and the time
-    const formatTime = `${now.toDateString()} ${time}`;
 
-    // displays the date and time as a string
-    document.getElementById("digital-display").innerHTML = formatTime;
+    document.getElementById("digital-time").innerHTML = time;
   };
 
   // calls the function every second
