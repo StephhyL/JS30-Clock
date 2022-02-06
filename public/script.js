@@ -5,28 +5,34 @@ window.addEventListener("load", () => {
 
   const setDate = () => {
     const now = new Date();
-    console.log("this is now--->", now);
+    // now looks like Sun Feb 06 2022 18:26:52 GMT-0500 (Eastern Standard Time)
     const seconds = now.getSeconds();
     const minutes = now.getMinutes();
     const hours = now.getHours();
 
-    // console.log(seconds);
-    // console.log(minutes);
-    // console.log(hours);
-    const secondsDegree = (seconds / 60) * 360 + 90;
-    // console.log("second--->", secondsDegree);
+    // seconds
+    const secondsDegree = (seconds / 60) * 360 + 90 + 360;
     secondHand.style.transform = `rotate(${secondsDegree}deg)`;
 
     // minutes
-    // console.log("minnutteee-->", minutes); // 48
     const minutesDegree = (minutes / 60) * 360 + 90;
-    // console.log("this is minuteDegree", minutesDegree);
     minuteHand.style.transform = `rotate(${minutesDegree}deg)`;
 
     // hours
     const hoursDegree = (hours / 12) * 360 + 90;
     hourHand.style.transform = `rotate(${hoursDegree}deg)`;
+
+    // time stringifies the hour/minute/second and add leading zero to make it 2 digits
+    const time = `${hours.toString().padStart(2, "0")}:${minutes
+      .toString()
+      .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+    // formatTime comes the date and the time
+    const formatTime = `${now.toDateString()} ${time}`;
+
+    // displays the date and time as a string
+    document.getElementById("digital-display").innerHTML = formatTime;
   };
 
+  // calls the function every second
   setInterval(setDate, 1000);
 });
