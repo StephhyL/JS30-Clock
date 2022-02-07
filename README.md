@@ -2,7 +2,7 @@
 
 **Clock** is an application that displays the time in real-time!
 
-The is Day 1 of the [30 Day Vanilla JavaScript Coding Challenge](https://javascript30.com/) by Wes Bos! The base code was provided but I added my own flare to it!
+The is Day 2 of the [30 Day Vanilla JavaScript Coding Challenge](https://javascript30.com/) by Wes Bos! The base code was provided but I added my own flare to it!
 
 ## Check it out on Heroku
 
